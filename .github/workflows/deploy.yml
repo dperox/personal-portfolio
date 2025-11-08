@@ -4,23 +4,21 @@ on:
   push:
     branches:
       - main
+      - cursor/create-sample-github-pages-website-9f48
+
+permissions:
+  contents: write
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
-        uses: actions/checkout@v2
-        
-      - name: Install Dependencies
-        run: npm install
-        
-      - name: Build
-        run: npm run build
+        uses: actions/checkout@v4
         
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist # or whichever directory contains the build
+          publish_dir: ./
           publish_branch: gh-pages

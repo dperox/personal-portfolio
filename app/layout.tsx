@@ -9,32 +9,32 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Daniel Piro | Software Engineer",
-  description: "Portfolio of Daniel Piro - Software Engineer building modern web experiences with Next.js, React, and TypeScript",
+  title: "Daniel Piro | Technical Lead @ Meta",
+  description: "Technical Lead at Meta Reality Labs, integrating Generative AI into next-generation wearables including Ray-Ban Meta smart glasses",
   metadataBase: new URL("https://danielpiro.com"),
-  keywords: ["Daniel Piro", "Software Engineer", "Web Developer", "Next.js", "React", "TypeScript", "Full-Stack"],
+  keywords: ["Daniel Piro", "Meta", "Technical Lead", "AI Wearables", "Generative AI", "Computer Vision", "AR/VR", "Ray-Ban Meta"],
   authors: [{ name: "Daniel Piro" }],
   creator: "Daniel Piro",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://danielpiro.com",
-    title: "Daniel Piro | Software Engineer",
-    description: "Portfolio of Daniel Piro - Software Engineer building modern web experiences",
+    title: "Daniel Piro | Technical Lead @ Meta",
+    description: "Leading AI integration into next-generation wearables at Meta Reality Labs. Building socially intelligent, AI-driven experiences.",
     siteName: "Daniel Piro Portfolio",
     images: [
       {
         url: "/og-image.svg",
         width: 1200,
         height: 630,
-        alt: "Daniel Piro - Software Engineer",
+        alt: "Daniel Piro - Technical Lead @ Meta | AI Wearables Integration",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Daniel Piro | Software Engineer",
-    description: "Portfolio of Daniel Piro - Software Engineer building modern web experiences",
+    title: "Daniel Piro | Technical Lead @ Meta",
+    description: "Leading AI integration into next-generation wearables at Meta Reality Labs",
     images: ["/og-image.svg"],
   },
   icons: {

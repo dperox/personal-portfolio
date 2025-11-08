@@ -1,13 +1,20 @@
 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="32" height="32" rx="6" fill="url(#gradient-light)"/>
+  <!-- Lighter background for light mode -->
+  <rect width="32" height="32" rx="6" fill="#f8fafc"/>
+  
+  <!-- Border with blue gradient -->
+  <rect x="0.5" y="0.5" width="31" height="31" rx="5.5" stroke="url(#gradient-light)" stroke-width="1" fill="none"/>
   <defs>
     <linearGradient id="gradient-light" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#60A5FA"/>
-      <stop offset="100%" stop-color="#3B82F6"/>
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#22c55e"/>
     </linearGradient>
   </defs>
-  <text x="16" y="21" font-family="monospace" font-size="14" font-weight="700" fill="white" text-anchor="middle">DP</text>
-  <circle cx="5" cy="5" r="1.5" fill="white" opacity="0.4"/>
-  <circle cx="27" cy="27" r="1.5" fill="white" opacity="0.4"/>
+  
+  <!-- {dp} text - dark for light mode -->
+  <text x="16" y="21" font-family="monospace" font-size="11" font-weight="700" fill="#0a0a0a" text-anchor="middle">{dp}</text>
+  
+  <!-- Code accent dots -->
+  <circle cx="5" cy="5" r="1.5" fill="#3B82F6" opacity="0.6"/>
+  <circle cx="27" cy="27" r="1.5" fill="#22c55e" opacity="0.6"/>
 </svg>
-

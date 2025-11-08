@@ -1,4 +1,6 @@
-import { Calendar } from "lucide-react"
+"use client"
+
+import { Calendar, ArrowDown } from "lucide-react"
 
 const timeline = [
   {
@@ -34,6 +36,10 @@ const timeline = [
 ]
 
 export function TimelineSection() {
+  const scrollToNext = () => {
+    window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })
+  }
+
   return (
     <div className="space-y-6">
       <h2 className="font-mono text-2xl font-bold text-[color:var(--fg)] md:text-4xl">
@@ -78,6 +84,15 @@ export function TimelineSection() {
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="flex justify-center pt-8">
+        <div
+          onClick={scrollToNext}
+          className="animate-bounce cursor-pointer opacity-30 transition-opacity duration-300 hover:opacity-100"
+        >
+          <ArrowDown className="h-6 w-6 text-[color:var(--accent-blue)]" />
+        </div>
       </div>
     </div>
   )

@@ -1,0 +1,42 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#og-gradient)"/>
+  <defs>
+    <linearGradient id="og-gradient" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1E3A8A"/>
+      <stop offset="100%" stop-color="#1E40AF"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Grid pattern -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="0.5" opacity="0.1"/>
+  </pattern>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  
+  <!-- Main content box -->
+  <rect x="100" y="140" width="1000" height="350" rx="20" fill="rgba(255, 255, 255, 0.05)" stroke="white" stroke-width="2" opacity="0.2"/>
+  
+  <!-- Icon -->
+  <rect x="150" y="215" width="200" height="200" rx="24" fill="url(#icon-gradient)"/>
+  <defs>
+    <linearGradient id="icon-gradient" x1="150" y1="215" x2="350" y2="415" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+  </defs>
+  <text x="250" y="345" font-family="monospace" font-size="90" font-weight="700" fill="white" text-anchor="middle">DP</text>
+  
+  <!-- Text content -->
+  <text x="400" y="280" font-family="sans-serif" font-size="72" font-weight="700" fill="white">Daniel Piro</text>
+  <text x="400" y="350" font-family="monospace" font-size="36" fill="#93C5FD">Software Engineer</text>
+  <text x="400" y="410" font-family="sans-serif" font-size="28" fill="#BFDBFE">Building modern web experiences</text>
+  
+  <!-- Code brackets decoration -->
+  <path d="M 80 180 L 100 200 L 80 220" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"/>
+  <path d="M 1120 180 L 1100 200 L 1120 220" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"/>
+  
+  <!-- Bottom text -->
+  <text x="600" y="580" font-family="monospace" font-size="24" fill="#93C5FD" text-anchor="middle">danielpiro.com</text>
+</svg>
+

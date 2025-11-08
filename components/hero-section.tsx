@@ -1,7 +1,17 @@
+"use client"
+
 import { StatusBadge } from "./status-badge"
-import { ArrowDown } from "lucide-react"
+import { ArrowDown, Play } from "lucide-react"
+import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog"
+import { Button } from "@/components/ui/button"
+import { useState } from "react"
 
 export function HeroSection() {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const scrollToNext = () => {
+    window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })
+  }
   return (
     <div className="space-y-6">
       <StatusBadge label="Online · Daniel Piro" color="green" />
@@ -26,6 +36,45 @@ export function HeroSection() {
       <p className="pl-6 font-mono text-[color:var(--fg-soft)]">{"}"}</p>
 
       <div className="flex items-center gap-4 pt-4">
+        <Dialog open={isOpen} onOpenChange={setIsOpen}>
+          <DialogTrigger asChild>
+            <Button
+              size="sm"
+              className="gap-2 bg-[#238636] font-mono text-sm font-bold text-white hover:bg-[#2ea043]"
+            >
+              <Play className="h-4 w-4" />
+              Run
+            </Button>
+          </DialogTrigger>
+          <DialogContent
+            className="w-fit max-w-[90vw] bg-[color:var(--panel)]/95 p-4 backdrop-blur-xl md:p-4 
+                       max-md:h-screen max-md:max-w-full max-md:w-screen max-md:p-0 max-md:m-0 max-md:rounded-none"
+            showCloseButton={true}
+          >
+            <DialogTitle className="sr-only">Introduction Video</DialogTitle>
+            <DialogDescription className="sr-only">
+              Watch an introduction video demonstration
+            </DialogDescription>
+            <div className="relative overflow-hidden rounded-lg bg-black md:rounded-lg max-md:h-full max-md:rounded-none max-md:flex max-md:items-center max-md:justify-center">
+              <video
+                className="max-h-[70vh] w-auto md:max-h-[70vh] max-md:h-full max-md:w-full max-md:max-h-none"
+                style={{ aspectRatio: '480/872' }}
+                controls
+                autoPlay
+                playsInline
+                preload="auto"
+                onEnded={() => setIsOpen(false)}
+              >
+                <source src="/intro.mov" type="video/quicktime" />
+                <source src="/intro.mov" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </DialogContent>
+        </Dialog>
+      </div>
+
+      <div className="flex items-center gap-4">
         <div className="flex -space-x-2">
           <div className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-[color:var(--panel)] bg-[color:var(--accent-blue)] font-mono text-sm font-bold text-white">
             AI
@@ -40,8 +89,13 @@ export function HeroSection() {
         <div className="text-sm text-[color:var(--fg-soft)]">Generative AI · Wearables · Computer Vision</div>
       </div>
 
-      <div className="flex animate-bounce justify-center pt-8">
-        <ArrowDown className="h-6 w-6 text-[color:var(--accent-blue)]" />
+      <div className="flex justify-center pt-8">
+        <div
+          onClick={scrollToNext}
+          className="animate-bounce cursor-pointer opacity-30 transition-opacity duration-300 hover:opacity-100"
+        >
+          <ArrowDown className="h-6 w-6 text-[color:var(--accent-blue)]" />
+        </div>
       </div>
     </div>
   )

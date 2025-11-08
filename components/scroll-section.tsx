@@ -18,16 +18,16 @@ export function ScrollSection({ children, id }: ScrollSectionProps) {
   })
 
   const opacity = useTransform(scrollYProgress, [0, 0.15, 0.85, 1], [0, 1, 1, 0])
-  const translateY = useTransform(scrollYProgress, [0, 0.25, 0.75, 1], [200, 0, 0, -200])
-  const translateZ = useTransform(scrollYProgress, [0, 0.25, 0.75, 1], [-300, 0, 0, -300])
-  const rotateX = useTransform(scrollYProgress, [0, 0.25, 0.75, 1], [25, 0, 0, -25])
-  const rotateY = useTransform(scrollYProgress, [0, 0.25, 0.75, 1], [-15, 0, 0, 15])
-  const scale = useTransform(scrollYProgress, [0, 0.25, 0.75, 1], [0.7, 1, 1, 0.7])
+  const translateY = useTransform(scrollYProgress, [0, 0.25, 0.75, 1], [400, 0, 0, -400])
+  const translateZ = useTransform(scrollYProgress, [0, 0.25, 0.75, 1], [-500, 0, 0, -500])
+  const rotateX = useTransform(scrollYProgress, [0, 0.25, 0.75, 1], [35, 0, 0, -35])
+  const rotateY = useTransform(scrollYProgress, [0, 0.25, 0.75, 1], [-20, 0, 0, 20])
+  const scale = useTransform(scrollYProgress, [0, 0.25, 0.75, 1], [0.6, 1, 1, 0.6])
   const blur = useTransform(scrollYProgress, [0, 0.15, 0.85, 1], [10, 0, 0, 10], { clamp: false })
   const filter = useTransform(blur, (value) => `blur(${value}px)`)
 
   return (
-    <section ref={ref} id={id} className="relative flex min-h-screen items-center justify-center py-12" style={{ scrollMarginTop: '40px' }}>
+    <section ref={ref} id={id} className="relative flex min-h-screen items-center justify-center py-4 snap-start snap-always" style={{ scrollMarginTop: '0px' }}>
       <div
         className="pointer-events-none relative flex h-full w-full items-center justify-center"
         style={{ perspective: "1200px" }}

@@ -8,7 +8,7 @@ import { ContactSection } from "@/components/contact-section"
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen">
+    <main className="relative min-h-screen snap-y snap-mandatory overflow-y-scroll">
       <CodeGridBackground />
 
       <ScrollSection id="hero">

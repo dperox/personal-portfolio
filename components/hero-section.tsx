@@ -8,9 +8,12 @@ import { useState } from "react"
 
 export function HeroSection() {
   const [isOpen, setIsOpen] = useState(false)
-
-  const scrollToNext = () => {
-    window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })
+  
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
   }
   return (
     <div className="space-y-6">
@@ -90,8 +93,8 @@ export function HeroSection() {
       </div>
 
       <div className="flex justify-center pt-8">
-        <div
-          onClick={scrollToNext}
+        <div 
+          onClick={() => scrollToSection('about')}
           className="animate-bounce cursor-pointer opacity-30 transition-opacity duration-300 hover:opacity-100"
         >
           <ArrowDown className="h-6 w-6 text-[color:var(--accent-blue)]" />

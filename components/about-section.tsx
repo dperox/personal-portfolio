@@ -1,11 +1,14 @@
 "use client"
 
 import { CodeBlock } from "./code-block"
-import { MapPin, Heart, Brain, ArrowDown } from "lucide-react"
+import { MapPin, Heart, Brain, ArrowDown, ArrowUp } from "lucide-react"
 
 export function AboutSection() {
-  const scrollToNext = () => {
-    window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
   }
   return (
     <div className="space-y-6">
@@ -63,9 +66,15 @@ export function AboutSection() {
 
       <p className="font-mono text-[color:var(--fg-soft)]">{"}"}</p>
 
-      <div className="flex justify-center pt-8">
+      <div className="flex justify-center gap-4 pt-8">
         <div 
-          onClick={scrollToNext}
+          onClick={() => scrollToSection('hero')}
+          className="cursor-pointer opacity-30 transition-opacity duration-300 hover:opacity-100"
+        >
+          <ArrowUp className="h-6 w-6 text-[color:var(--accent-green)]" />
+        </div>
+        <div 
+          onClick={() => scrollToSection('expertise')}
           className="animate-bounce cursor-pointer opacity-30 transition-opacity duration-300 hover:opacity-100"
         >
           <ArrowDown className="h-6 w-6 text-[color:var(--accent-green)]" />

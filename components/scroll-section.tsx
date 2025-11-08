@@ -6,9 +6,10 @@ import { useRef } from "react"
 
 interface ScrollSectionProps {
   children: React.ReactNode
+  id?: string
 }
 
-export function ScrollSection({ children }: ScrollSectionProps) {
+export function ScrollSection({ children, id }: ScrollSectionProps) {
   const ref = useRef<HTMLDivElement | null>(null)
 
   const { scrollYProgress } = useScroll({
@@ -24,7 +25,7 @@ export function ScrollSection({ children }: ScrollSectionProps) {
   const scale = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0.85, 1, 1, 0.85])
 
   return (
-    <section ref={ref} className="relative flex min-h-screen items-center justify-center py-20">
+    <section ref={ref} id={id} className="relative flex min-h-screen items-center justify-center py-20">
       <div
         className="pointer-events-none relative flex h-full w-full items-center justify-center"
         style={{ perspective: "1200px" }}

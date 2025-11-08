@@ -11,23 +11,23 @@ export default function Home() {
     <main className="relative min-h-screen">
       <CodeGridBackground />
 
-      <ScrollSection>
+      <ScrollSection id="hero">
         <HeroSection />
       </ScrollSection>
 
-      <ScrollSection>
+      <ScrollSection id="about">
         <AboutSection />
       </ScrollSection>
 
-      <ScrollSection>
+      <ScrollSection id="expertise">
         <ExpertiseSection />
       </ScrollSection>
 
-      <ScrollSection>
+      <ScrollSection id="timeline">
         <TimelineSection />
       </ScrollSection>
 
-      <ScrollSection>
+      <ScrollSection id="contact">
         <ContactSection />
       </ScrollSection>
 

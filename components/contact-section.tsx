@@ -1,7 +1,13 @@
 "use client"
-import { Linkedin } from "lucide-react"
+import { Linkedin, ArrowUp } from "lucide-react"
 
 export function ContactSection() {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
   return (
     <div className="space-y-6">
       <h2 className="font-mono text-2xl font-bold text-[color:var(--fg)] md:text-4xl">
@@ -56,6 +62,15 @@ export function ContactSection() {
       </div>
 
       <p className="font-mono text-[color:var(--fg-soft)]">{"}"}</p>
+
+      <div className="flex justify-center pt-8">
+        <div 
+          onClick={() => scrollToSection('timeline')}
+          className="cursor-pointer opacity-30 transition-opacity duration-300 hover:opacity-100"
+        >
+          <ArrowUp className="h-6 w-6 text-[color:var(--accent-green)]" />
+        </div>
+      </div>
     </div>
   )
 }

@@ -38,12 +38,12 @@ export function HeroSection() {
 
       <p className="pl-6 font-mono text-[color:var(--fg-soft)]">{"}"}</p>
 
-      <div className="flex items-center gap-4 pt-2">
+      <div className="flex items-center justify-end gap-4 pt-2">
         <Dialog open={isOpen} onOpenChange={setIsOpen}>
           <DialogTrigger asChild>
             <Button
               size="sm"
-              className="gap-2 bg-[#238636] font-mono text-sm font-bold text-white hover:bg-[#2ea043]"
+              className="gap-2 bg-[#238636] font-mono text-sm font-bold text-white hover:bg-[#2ea043] shadow-[0_0_20px_rgba(35,134,54,0.6)] hover:shadow-[0_0_25px_rgba(46,160,67,0.8)] transition-shadow duration-300"
             >
               <Play className="h-4 w-4" />
               Run

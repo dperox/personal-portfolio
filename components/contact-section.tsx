@@ -9,7 +9,7 @@ export function ContactSection() {
     }
   }
   return (
-    <div className="space-y-6">
+    <div className="space-y-4">
       <h2 className="font-mono text-2xl font-bold text-[color:var(--fg)] md:text-4xl">
         <span className="text-[color:var(--accent-blue)]">async</span>{" "}
         <span className="text-[color:var(--accent-yellow)]">connect</span>
@@ -63,7 +63,7 @@ export function ContactSection() {
 
       <p className="font-mono text-[color:var(--fg-soft)]">{"}"}</p>
 
-      <div className="flex justify-center pt-8">
+      <div className="flex justify-center pt-4">
         <div 
           onClick={() => scrollToSection('timeline')}
           className="cursor-pointer opacity-30 transition-opacity duration-300 hover:opacity-100"

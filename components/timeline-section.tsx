@@ -42,9 +42,9 @@ export function TimelineSection() {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
   }
-  
+
   return (
-    <div className="space-y-6">
+    <div className="space-y-4">
       <h2 className="font-mono text-2xl font-bold text-[color:var(--fg)] md:text-4xl">
         <span className="text-[color:var(--accent-blue)]">log</span>
         <span className="text-[color:var(--fg-soft)]">.</span>
@@ -52,11 +52,11 @@ export function TimelineSection() {
         <span className="text-[color:var(--fg-soft)]">()</span>
       </h2>
 
-      <div className="space-y-6 pt-4">
+      <div className="space-y-4 pt-2">
         {timeline.map((entry, index) => (
           <div
             key={index}
-            className="group relative rounded-2xl border border-[color:var(--panel-border)] bg-gradient-to-r from-[color:var(--accent-blue)]/5 to-transparent p-6 transition-all hover:border-[color:var(--accent-blue)]/40 hover:shadow-[0_8px_32px_rgba(137,180,250,0.1)]"
+            className="group relative rounded-2xl border border-[color:var(--panel-border)] bg-gradient-to-r from-[color:var(--accent-blue)]/5 to-transparent p-4 transition-all hover:border-[color:var(--accent-blue)]/40 hover:shadow-[0_8px_32px_rgba(137,180,250,0.1)]"
           >
             <div className="absolute -left-3 top-8 flex h-6 w-6 items-center justify-center rounded-full border-2 border-[color:var(--panel)] bg-[color:var(--accent-blue)]">
               <Calendar className="h-3 w-3 text-white" />
@@ -89,16 +89,16 @@ export function TimelineSection() {
         ))}
       </div>
 
-      <div className="flex justify-center gap-4 pt-8">
-        <div 
+      <div className="flex justify-center gap-4 pt-4">
+        <div
           onClick={() => scrollToSection('expertise')}
           className="cursor-pointer opacity-30 transition-opacity duration-300 hover:opacity-100"
         >
           <ArrowUp className="h-6 w-6 text-[color:var(--accent-blue)]" />
         </div>
-        <div 
+        <div
           onClick={() => scrollToSection('contact')}
-          className="animate-bounce cursor-pointer opacity-30 transition-opacity duration-300 hover:opacity-100"
+          className="cursor-pointer opacity-30 transition-opacity duration-300 hover:opacity-100"
         >
           <ArrowDown className="h-6 w-6 text-[color:var(--accent-blue)]" />
         </div>

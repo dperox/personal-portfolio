@@ -17,15 +17,17 @@ export function ScrollSection({ children, id }: ScrollSectionProps) {
     offset: ["start end", "end start"],
   })
 
-  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0])
-  const translateY = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [100, 0, 0, -100])
-  const translateZ = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [-150, 0, 0, -150])
-  const rotateX = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [15, 0, 0, -15])
-  const rotateY = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [-8, 0, 0, 8])
-  const scale = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0.85, 1, 1, 0.85])
+  const opacity = useTransform(scrollYProgress, [0, 0.15, 0.85, 1], [0, 1, 1, 0])
+  const translateY = useTransform(scrollYProgress, [0, 0.25, 0.75, 1], [200, 0, 0, -200])
+  const translateZ = useTransform(scrollYProgress, [0, 0.25, 0.75, 1], [-300, 0, 0, -300])
+  const rotateX = useTransform(scrollYProgress, [0, 0.25, 0.75, 1], [25, 0, 0, -25])
+  const rotateY = useTransform(scrollYProgress, [0, 0.25, 0.75, 1], [-15, 0, 0, 15])
+  const scale = useTransform(scrollYProgress, [0, 0.25, 0.75, 1], [0.7, 1, 1, 0.7])
+  const blur = useTransform(scrollYProgress, [0, 0.15, 0.85, 1], [10, 0, 0, 10], { clamp: false })
+  const filter = useTransform(blur, (value) => `blur(${value}px)`)
 
   return (
-    <section ref={ref} id={id} className="relative flex min-h-screen items-center justify-center py-20">
+    <section ref={ref} id={id} className="relative flex min-h-screen items-center justify-center py-12" style={{ scrollMarginTop: '40px' }}>
       <div
         className="pointer-events-none relative flex h-full w-full items-center justify-center"
         style={{ perspective: "1200px" }}
@@ -38,6 +40,7 @@ export function ScrollSection({ children, id }: ScrollSectionProps) {
             rotateX,
             rotateY,
             scale,
+            filter,
             transformStyle: "preserve-3d",
           }}
           className="pointer-events-auto w-full max-w-5xl px-6"
@@ -52,7 +55,7 @@ export function ScrollSection({ children, id }: ScrollSectionProps) {
               ease: "easeInOut",
             }}
             style={{ transformStyle: "preserve-3d" }}
-            className="rounded-3xl border border-[color:var(--panel-border)] bg-[color:var(--panel)]/85 p-8 shadow-[0_24px_80px_rgba(0,0,0,0.45)] backdrop-blur-xl md:p-12"
+            className="w-full rounded-3xl border border-[color:var(--panel-border)] bg-[color:var(--panel)]/85 p-4 shadow-[0_24px_80px_rgba(0,0,0,0.45)] backdrop-blur-xl md:p-6"
           >
             {children}
           </motion.div>

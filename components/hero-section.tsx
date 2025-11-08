@@ -8,7 +8,7 @@ import { useState } from "react"
 
 export function HeroSection() {
   const [isOpen, setIsOpen] = useState(false)
-  
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id)
     if (element) {
@@ -16,7 +16,7 @@ export function HeroSection() {
     }
   }
   return (
-    <div className="space-y-6">
+    <div className="space-y-4">
       <StatusBadge label="Online · Daniel Piro" color="green" />
 
       <h1 className="font-mono text-3xl font-bold leading-tight text-[color:var(--fg)] md:text-5xl">
@@ -38,7 +38,7 @@ export function HeroSection() {
 
       <p className="pl-6 font-mono text-[color:var(--fg-soft)]">{"}"}</p>
 
-      <div className="flex items-center gap-4 pt-4">
+      <div className="flex items-center gap-4 pt-2">
         <Dialog open={isOpen} onOpenChange={setIsOpen}>
           <DialogTrigger asChild>
             <Button
@@ -92,10 +92,10 @@ export function HeroSection() {
         <div className="text-sm text-[color:var(--fg-soft)]">Generative AI · Wearables · Computer Vision</div>
       </div>
 
-      <div className="flex justify-center pt-8">
-        <div 
+      <div className="flex justify-center pt-4">
+        <div
           onClick={() => scrollToSection('about')}
-          className="animate-bounce cursor-pointer opacity-30 transition-opacity duration-300 hover:opacity-100"
+          className="cursor-pointer opacity-30 transition-opacity duration-300 hover:opacity-100"
         >
           <ArrowDown className="h-6 w-6 text-[color:var(--accent-blue)]" />
         </div>

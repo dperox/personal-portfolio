@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     siteName: "Daniel Piro Portfolio",
     images: [
       {
-        url: "/og-image.svg",
+        url: "/og-image",
         width: 1200,
         height: 630,
         alt: "Daniel Piro - Technical Lead @ Meta | AI Wearables Integration",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Daniel Piro | Technical Lead @ Meta",
     description: "Leading AI integration into next-generation wearables at Meta Reality Labs",
-    images: ["/og-image.svg"],
+    images: ["/og-image"],
   },
   icons: {
     icon: [

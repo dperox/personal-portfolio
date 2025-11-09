@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // output: 'export', // Removed to enable dynamic OG images and route handlers
+  output: 'export',
   typescript: {
     ignoreBuildErrors: true,
   },

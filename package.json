@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "next build",
+    "generate:og": "node scripts/generate-og.mjs",
+    "build": "npm run generate:og && next build",
     "dev": "next dev",
     "lint": "eslint .",
     "start": "next start"

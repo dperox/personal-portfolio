@@ -28,11 +28,10 @@ export function HeroSection() {
       <div className="space-y-4 pl-6 text-base leading-relaxed text-[color:var(--fg-soft)] md:text-lg">
         <p>
           <span className="text-[color:var(--accent-green)]">return</span>{" "}
-          <span className="font-semibold text-[color:var(--fg)]">Technical Lead @ Meta | AI Wearables Integration</span>
+          <span className="font-semibold text-[color:var(--fg)]">Technologist, Inventor & Builder</span>
         </p>
         <p className="max-w-2xl text-pretty">
-          Leading the integration of Generative AI into next-generation wearables at Meta Reality Labs. Building
-          socially intelligent, AI-driven experiences that enhance how people connect and communicate.
+          I'm a technologist and builder passionate about creating at the intersection of software, hardware, and human experience.
         </p>
       </div>
 

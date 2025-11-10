@@ -1,7 +1,7 @@
 "use client"
 
 import { CodeBlock } from "./code-block"
-import { MapPin, Heart, Brain, ArrowDown, ArrowUp } from "lucide-react"
+import { ArrowDown, ArrowUp } from "lucide-react"
 
 export function AboutSection() {
   const scrollToSection = (id: string) => {
@@ -38,30 +38,16 @@ export function AboutSection() {
 }`}
       </CodeBlock>
 
-      <div className="grid gap-4 pt-2 md:grid-cols-3">
-        <div className="space-y-2 rounded-2xl border border-[color:var(--panel-border)] bg-gradient-to-br from-[color:var(--accent-blue)]/10 to-transparent p-4">
-          <MapPin className="h-6 w-6 text-[color:var(--accent-blue)]" />
-          <h3 className="font-mono text-base font-semibold text-[color:var(--fg)]">Location</h3>
-          <p className="text-sm leading-relaxed text-[color:var(--fg-soft)]">
-            Based in Washington DC-Baltimore Area, working on Meta's global platforms.
-          </p>
-        </div>
-
-        <div className="space-y-2 rounded-2xl border border-[color:var(--panel-border)] bg-gradient-to-br from-[color:var(--accent-green)]/10 to-transparent p-4">
-          <Brain className="h-6 w-6 text-[color:var(--accent-green)]" />
-          <h3 className="font-mono text-base font-semibold text-[color:var(--fg)]">Philosophy</h3>
-          <p className="text-sm leading-relaxed text-[color:var(--fg-soft)]">
-            Building socially intelligent experiences that enhance connection, communication, and collaboration.
-          </p>
-        </div>
-
-        <div className="space-y-2 rounded-2xl border border-[color:var(--panel-border)] bg-gradient-to-br from-[color:var(--accent-red)]/10 to-transparent p-4">
-          <Heart className="h-6 w-6 text-[color:var(--accent-red)]" />
-          <h3 className="font-mono text-base font-semibold text-[color:var(--fg)]">Passion</h3>
-          <p className="text-sm leading-relaxed text-[color:var(--fg-soft)]">
-            Rapidly exploring, validating, and shipping AI-powered features from prototype to production.
-          </p>
-        </div>
+      <div className="space-y-4 pt-2">
+        <p className="text-base leading-relaxed text-[color:var(--fg-soft)]">
+          My work spans AI, full-stack development, and device integration, focusing on how intelligent systems can feel natural, intuitive, and empowering.
+        </p>
+        <p className="text-base leading-relaxed text-[color:var(--fg-soft)]">
+          With a background in rapid prototyping and system architecture, I enjoy transforming abstract ideas into tangible, functional products that connect people and technology in meaningful ways.
+        </p>
+        <p className="text-base leading-relaxed text-[color:var(--fg-soft)]">
+          Above all, I believe innovation should serve curiosity — and that the best technology is built with both precision and imagination.
+        </p>
       </div>
 
       <p className="font-mono text-[color:var(--fg-soft)]">{"}"}</p>

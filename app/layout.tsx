@@ -9,7 +9,7 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Daniel Piro | Technical Lead @ Meta",
+  title: "Daniel Piro | Technologist, Inventor & Builder",
   description: "Technical Lead at Meta Reality Labs, integrating Generative AI into next-generation wearables including Ray-Ban Meta smart glasses",
   metadataBase: new URL("https://danielpiro.com"),
   keywords: ["Daniel Piro", "Meta", "Technical Lead", "AI Wearables", "Generative AI", "Computer Vision", "AR/VR", "Ray-Ban Meta"],
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://danielpiro.com",
-    title: "Daniel Piro | Technical Lead @ Meta",
+    title: "Daniel Piro | Technologist, Inventor & Builder",
     description: "Leading AI integration into next-generation wearables at Meta Reality Labs. Building socially intelligent, AI-driven experiences.",
     siteName: "Daniel Piro Portfolio",
     images: [
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Daniel Piro | Technical Lead @ Meta",
+    title: "Daniel Piro | Technologist, Inventor & Builder",
     description: "Leading AI integration into next-generation wearables at Meta Reality Labs",
     images: ["/og-image-v2.png"],
   },

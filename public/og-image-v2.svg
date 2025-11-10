@@ -1,36 +1,24 @@
 <svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
   <defs>
+    <!-- Dark Catppuccin Mocha Palette -->
+    <!-- Base: #1e1e2e, Mantle: #181825, Crust: #11111b -->
+    <!-- Text: #cdd6f4, Subtext1: #bac2de, Subtext0: #a6adc8 -->
+    <!-- Lavender: #b4befe, Blue: #89b4fa, Teal: #94e2d5, Mauve: #cba6f7 -->
+
+    <!-- Dark gradient background -->
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#030712"/>
-      <stop offset="100%" stop-color="#0f172a"/>
-    </linearGradient>
-
-    <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0ea5e9"/>
-      <stop offset="100%" stop-color="#3b82f6"/>
-    </linearGradient>
-
-    <linearGradient id="pill-green" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#22c55e"/>
-      <stop offset="100%" stop-color="#16a34a"/>
-    </linearGradient>
-    <linearGradient id="pill-blue" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#2563eb"/>
-      <stop offset="100%" stop-color="#3b82f6"/>
-    </linearGradient>
-    <linearGradient id="pill-amber" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#f59e0b"/>
-      <stop offset="100%" stop-color="#f97316"/>
+      <stop offset="0%" stop-color="#1e1e2e"/>
+      <stop offset="100%" stop-color="#181825"/>
     </linearGradient>
   </defs>
 
   <!-- Background -->
   <rect width="1200" height="630" fill="url(#bg)" />
 
-  <!-- Subtle grid -->
-  <g stroke="#1e293b" stroke-width="1" opacity="0.35">
+  <!-- Very subtle texture grid -->
+  <g stroke="#313244" stroke-width="1" opacity="0.3">
+    <!-- vertical lines every 40px -->
     <g>
-      <!-- 40px vertical grid -->
       <line x1="0" y1="0" x2="0" y2="630"/>
       <line x1="40" y1="0" x2="40" y2="630"/>
       <line x1="80" y1="0" x2="80" y2="630"/>
@@ -63,8 +51,8 @@
       <line x1="1160" y1="0" x2="1160" y2="630"/>
       <line x1="1200" y1="0" x2="1200" y2="630"/>
     </g>
+    <!-- horizontal lines every 40px -->
     <g>
-      <!-- horizontal grid -->
       <line x1="0" y1="0" x2="1200" y2="0"/>
       <line x1="0" y1="40" x2="1200" y2="40"/>
       <line x1="0" y1="80" x2="1200" y2="80"/>
@@ -84,74 +72,102 @@
     </g>
   </g>
 
-  <!-- Terminal-style tile -->
-  <rect x="140" y="200" width="190" height="190" rx="30" fill="url(#tile)" />
-  <text x="235" y="312"
+  <!-- Logo tile: crust background, lavender border, {dp} in lavender -->
+  <rect x="120" y="160" width="240" height="240" rx="36"
+        fill="#11111b" stroke="#b4befe" stroke-width="5" />
+  <text x="240" y="305"
         text-anchor="middle"
         font-family="'JetBrains Mono', 'IBM Plex Mono', monospace"
-        font-size="54"
+        font-size="72"
+        font-weight="600"
         letter-spacing="2"
-        fill="#e2e8f0">
-    $ {dp}
+        fill="#b4befe">
+    {dp}
   </text>
 
   <!-- Name -->
-  <text x="370" y="260"
-        font-family="'JetBrains Mono', monospace"
-        font-size="42"
+  <text x="400" y="240"
+        font-family="'JetBrains Mono', 'IBM Plex Mono', monospace"
+        font-size="56"
+        font-weight="700"
         letter-spacing="1.5"
-        fill="#e2e8f0">
+        fill="#cdd6f4">
     Daniel Piro
   </text>
 
   <!-- Subtitle -->
-  <text x="370" y="305"
-        font-family="'JetBrains Mono', monospace"
-        font-size="22"
-        letter-spacing="1.5"
-        fill="#38bdf8">
-    Technologist, Inventor &amp; Builder
+  <text x="400" y="295"
+        font-family="'JetBrains Mono', 'IBM Plex Mono', monospace"
+        font-size="32"
+        letter-spacing="1.4"
+        fill="#bac2de">
+    Technologist, Inventor, Builder
   </text>
 
-  <!-- Quote line -->
-  <text x="370" y="350"
-        font-family="'JetBrains Mono', monospace"
-        font-size="18"
+  <!-- Quote -->
+  <text x="400" y="350"
+        font-family="'JetBrains Mono', 'IBM Plex Mono', monospace"
+        font-size="26"
         letter-spacing="1.2"
         font-style="italic"
-        fill="#94a3b8">
-    "Innovation should serve curiosity — built with both precision and imagination."
+        fill="#a6adc8">
+    "Innovation should serve curiosity"
   </text>
 
-  <!-- Pills -->
-  <g transform="translate(330, 400)">
-    <rect x="0" y="0" rx="20" width="110" height="44" fill="none" stroke="url(#pill-green)" stroke-width="2"/>
-    <text x="55" y="28" text-anchor="middle"
-          font-family="'JetBrains Mono', monospace"
-          font-size="16" letter-spacing="1.2" fill="#bbf7d0">AI</text>
+  <!-- Pills row -->
+
+  <!-- AI -->
+  <g transform="translate(380, 400)">
+    <rect x="0" y="0" rx="26" width="140" height="56"
+          fill="#cba6f7" />
+    <text x="70" y="36"
+          text-anchor="middle"
+          font-family="'JetBrains Mono', 'IBM Plex Mono', monospace"
+          font-size="22"
+          font-weight="600"
+          letter-spacing="1.3"
+          fill="#11111b">
+      AI
+    </text>
   </g>
 
-  <g transform="translate(480, 400)">
-    <rect x="0" y="0" rx="20" width="160" height="44" fill="none" stroke="url(#pill-blue)" stroke-width="2"/>
-    <text x="80" y="28" text-anchor="middle"
-          font-family="'JetBrains Mono', monospace"
-          font-size="16" letter-spacing="1.2" fill="#bfdbfe">Software</text>
+  <!-- Software -->
+  <g transform="translate(560, 400)">
+    <rect x="0" y="0" rx="26" width="190" height="56"
+          fill="#89b4fa" />
+    <text x="95" y="36"
+          text-anchor="middle"
+          font-family="'JetBrains Mono', 'IBM Plex Mono', monospace"
+          font-size="22"
+          font-weight="600"
+          letter-spacing="1.3"
+          fill="#11111b">
+      Software
+    </text>
   </g>
 
-  <g transform="translate(670, 400)">
-    <rect x="0" y="0" rx="20" width="150" height="44" fill="none" stroke="url(#pill-amber)" stroke-width="2"/>
-    <text x="75" y="28" text-anchor="middle"
-          font-family="'JetBrains Mono', monospace"
-          font-size="16" letter-spacing="1.2" fill="#fed7aa">Devices</text>
+  <!-- Devices -->
+  <g transform="translate(790, 400)">
+    <rect x="0" y="0" rx="26" width="180" height="56"
+          fill="#94e2d5" />
+    <text x="90" y="36"
+          text-anchor="middle"
+          font-family="'JetBrains Mono', 'IBM Plex Mono', monospace"
+          font-size="22"
+          font-weight="600"
+          letter-spacing="1.3"
+          fill="#11111b">
+      Devices
+    </text>
   </g>
 
   <!-- URL -->
-  <text x="600" y="565"
+  <text x="600" y="540"
         text-anchor="middle"
-        font-family="'JetBrains Mono', monospace"
-        font-size="14"
-        letter-spacing="1.5"
-        fill="#475569">
+        font-family="'JetBrains Mono', 'IBM Plex Mono', monospace"
+        font-size="20"
+        letter-spacing="2"
+        fill="#a6adc8">
     danielpiro.com
   </text>
 </svg>
